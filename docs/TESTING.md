@@ -1,5 +1,21 @@
 # Verification evidence — 25 November 2026
 
+## Fresh repository verification — 26 November 2026
+
+**Code source revision:** `625f4f6e86a339472f49ce2fc7991f71cc48fae3` in the standalone Retenqo repository. These results apply to that source snapshot; this documentation update does not change application code.
+
+| Check | Result | Scope |
+| --- | --- | --- |
+| Android JVM, lint, debug build and AndroidTest APK | Passed | `:app:testDebugUnitTest :app:lintDebug :app:assembleDebug :app:assembleDebugAndroidTest`; 122 JVM tests, 0 failures/errors |
+| Android script test entry point | Passed | `bash scripts/test-mneme.sh`; wrapper now invokes non-executable tracked scripts via Bash |
+| Website formatting, lint, typecheck, unit tests and build | Passed | Prettier check; 0 Astro diagnostics; 26/26 Vitest; 13 static pages |
+| Website browser/accessibility suite | 110 passed, 74 skipped | Playwright 1.65.1 Ubuntu image; Chromium, Pixel mobile, Firefox and WebKit. Axe scans cover Chromium desktop/mobile across routes and themes; remaining skips are project-specific by design. |
+| Website coverage | 93.75% statements, 92.85% branches, 100% functions, 94.59% lines | Vitest V8; configured `src/lib/**/*.ts` scope only |
+| Website dependency audit | No known vulnerabilities | `pnpm audit --audit-level=low`; web package graph only |
+| Device instrumentation | Not run | No Android emulator/system image or connected device was available; AndroidTest APK compiled successfully. |
+
+The Linux host is Arch-based and cannot launch Playwright's Ubuntu WebKit binary directly. The complete browser suite was therefore run in the official Playwright Ubuntu image, where all configured browser projects completed. Android TalkBack/Switch Access, device instrumentation and on-device performance remain unverified on this host.
+
 **Release:** [Retenqo v0.1.4](https://github.com/priyanshuchawda/retenqo/releases/tag/v0.1.4)
 
 The recorded evidence combines Android JVM XML results, device release verification and website test/build results. It is scoped to the tested development revisions and published artifact, not a fresh execution of this documentation revision.
