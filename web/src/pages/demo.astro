@@ -9,78 +9,204 @@ import { SITE_CONFIG } from '../config/site';
   description="A browser-only illustration of Retenqo's capture, memory, reminder, and user-confirmed follow-through workflow."
 >
   <section class="mx-auto max-w-4xl px-4 py-16 sm:px-6">
-    <p class="inline-flex rounded-full border border-[var(--border-subtle)] bg-[var(--accent-soft)] px-3 py-1 text-xs font-semibold tracking-wide text-[var(--accent-primary)]">
+    <p
+      class="inline-flex rounded-full border border-[var(--border-subtle)] bg-[var(--accent-soft)] px-3 py-1 text-xs font-semibold tracking-wide text-[var(--accent-primary)]"
+    >
       Synthetic browser walkthrough
     </p>
-    <h1 class="mt-4 text-4xl font-bold tracking-tight text-[var(--text-primary)] sm:text-5xl">
+    <h1
+      class="mt-4 text-4xl font-bold tracking-tight text-[var(--text-primary)] sm:text-5xl"
+    >
       See the workflow, step by step
     </h1>
-    <p class="mt-4 max-w-3xl text-base leading-relaxed text-[var(--text-secondary)]">
-      This walkthrough uses sample messages and fixed browser responses to explain the product flow. It does not capture Android notifications or run Retenqo's on-device AI. The installed Android app performs those actions locally after you grant the relevant permission.
+    <p
+      class="mt-4 max-w-3xl text-base leading-relaxed text-[var(--text-secondary)]"
+    >
+      This walkthrough uses sample messages and fixed browser responses to
+      explain the product flow. It does not capture Android notifications or run
+      Retenqo's on-device AI. The installed Android app performs those actions
+      locally after you grant the relevant permission.
     </p>
 
-    <div class="mt-8 rounded-2xl border border-[var(--border-subtle)] bg-[var(--bg-secondary)] p-6 sm:p-8">
-      <p id="demo-step-count" class="text-sm font-semibold text-[var(--accent-primary)]" aria-live="polite">
+    <div
+      class="mt-8 rounded-2xl border border-[var(--border-subtle)] bg-[var(--bg-secondary)] p-6 sm:p-8"
+    >
+      <p
+        id="demo-step-count"
+        class="text-sm font-semibold text-[var(--accent-primary)]"
+        aria-live="polite"
+      >
         Step 1 of 5
       </p>
 
       <section id="demo-step-1" class="mt-5" aria-labelledby="demo-heading-1">
-        <h2 id="demo-heading-1" tabindex="-1" class="text-2xl font-semibold text-[var(--text-primary)]">1. Choose what to capture</h2>
-        <p class="mt-3 text-[var(--text-secondary)]">Sample notification from a permitted source: “Can you send the presentation slides by Friday at 4 PM?”</p>
-        <button type="button" data-action="review" class="mt-6 inline-flex min-h-12 items-center justify-center rounded-xl bg-[var(--btn-primary-bg)] px-5 py-3 font-semibold text-[var(--btn-primary-text)] hover:bg-[var(--btn-primary-hover)] focus-visible:outline-2 focus-visible:outline-offset-2">
+        <h2
+          id="demo-heading-1"
+          tabindex="-1"
+          class="text-2xl font-semibold text-[var(--text-primary)]"
+        >
+          1. Choose what to capture
+        </h2>
+        <p class="mt-3 text-[var(--text-secondary)]">
+          Sample notification from a permitted source: “Can you send the
+          presentation slides by Friday at 4 PM?”
+        </p>
+        <button
+          type="button"
+          data-action="review"
+          class="mt-6 inline-flex min-h-12 items-center justify-center rounded-xl bg-[var(--btn-primary-bg)] px-5 py-3 font-semibold text-[var(--btn-primary-text)] hover:bg-[var(--btn-primary-hover)] focus-visible:outline-2 focus-visible:outline-offset-2"
+        >
           Review the suggestion
         </button>
       </section>
 
-      <section id="demo-step-2" class="mt-5" aria-labelledby="demo-heading-2" hidden>
-        <h2 id="demo-heading-2" tabindex="-1" class="text-2xl font-semibold text-[var(--text-primary)]">2. Review before saving</h2>
-        <article class="mt-4 rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-primary)] p-4">
-          <h3 class="font-semibold text-[var(--text-primary)]">Send presentation slides</h3>
-          <p class="mt-1 text-sm text-[var(--text-secondary)]">Friday at 4 PM · Source: sample notification</p>
-          <p class="mt-3 text-sm text-[var(--text-secondary)]">The suggestion stays pending until you approve it.</p>
+      <section
+        id="demo-step-2"
+        class="mt-5"
+        aria-labelledby="demo-heading-2"
+        hidden
+      >
+        <h2
+          id="demo-heading-2"
+          tabindex="-1"
+          class="text-2xl font-semibold text-[var(--text-primary)]"
+        >
+          2. Review before saving
+        </h2>
+        <article
+          class="mt-4 rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-primary)] p-4"
+        >
+          <h3 class="font-semibold text-[var(--text-primary)]">
+            Send presentation slides
+          </h3>
+          <p class="mt-1 text-sm text-[var(--text-secondary)]">
+            Friday at 4 PM · Source: sample notification
+          </p>
+          <p class="mt-3 text-sm text-[var(--text-secondary)]">
+            The suggestion stays pending until you approve it.
+          </p>
         </article>
-        <button type="button" data-action="approve" class="mt-6 inline-flex min-h-12 items-center justify-center rounded-xl bg-[var(--btn-primary-bg)] px-5 py-3 font-semibold text-[var(--btn-primary-text)] hover:bg-[var(--btn-primary-hover)] focus-visible:outline-2 focus-visible:outline-offset-2">
+        <button
+          type="button"
+          data-action="approve"
+          class="mt-6 inline-flex min-h-12 items-center justify-center rounded-xl bg-[var(--btn-primary-bg)] px-5 py-3 font-semibold text-[var(--btn-primary-text)] hover:bg-[var(--btn-primary-hover)] focus-visible:outline-2 focus-visible:outline-offset-2"
+        >
           Approve and save sample task
         </button>
       </section>
 
-      <section id="demo-step-3" class="mt-5" aria-labelledby="demo-heading-3" hidden>
-        <h2 id="demo-heading-3" tabindex="-1" class="text-2xl font-semibold text-[var(--text-primary)]">3. Ask about saved memory</h2>
-        <p class="mt-3 text-[var(--text-secondary)]">Question: “When are my slides due?”</p>
-        <button type="button" data-action="ask" class="mt-5 inline-flex min-h-12 items-center justify-center rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-tertiary)] px-5 py-3 font-semibold text-[var(--text-primary)] hover:bg-[var(--accent-soft)] focus-visible:outline-2 focus-visible:outline-offset-2">
+      <section
+        id="demo-step-3"
+        class="mt-5"
+        aria-labelledby="demo-heading-3"
+        hidden
+      >
+        <h2
+          id="demo-heading-3"
+          tabindex="-1"
+          class="text-2xl font-semibold text-[var(--text-primary)]"
+        >
+          3. Ask about saved memory
+        </h2>
+        <p class="mt-3 text-[var(--text-secondary)]">
+          Question: “When are my slides due?”
+        </p>
+        <button
+          type="button"
+          data-action="ask"
+          class="mt-5 inline-flex min-h-12 items-center justify-center rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-tertiary)] px-5 py-3 font-semibold text-[var(--text-primary)] hover:bg-[var(--accent-soft)] focus-visible:outline-2 focus-visible:outline-offset-2"
+        >
           Ask the sample memory
         </button>
-        <p id="demo-answer" class="mt-4 rounded-xl bg-[var(--bg-primary)] p-4 text-[var(--text-primary)]" hidden>
-          Synthetic answer: The presentation slides are due Friday at 4 PM. Source: sample notification.
+        <p
+          id="demo-answer"
+          class="mt-4 rounded-xl bg-[var(--bg-primary)] p-4 text-[var(--text-primary)]"
+          hidden
+        >
+          Synthetic answer: The presentation slides are due Friday at 4 PM.
+          Source: sample notification.
         </p>
-        <button type="button" data-action="reminder" class="mt-4 inline-flex min-h-12 items-center justify-center rounded-xl bg-[var(--btn-primary-bg)] px-5 py-3 font-semibold text-[var(--btn-primary-text)] hover:bg-[var(--btn-primary-hover)] focus-visible:outline-2 focus-visible:outline-offset-2" hidden>
+        <button
+          type="button"
+          data-action="reminder"
+          class="mt-4 inline-flex min-h-12 items-center justify-center rounded-xl bg-[var(--btn-primary-bg)] px-5 py-3 font-semibold text-[var(--btn-primary-text)] hover:bg-[var(--btn-primary-hover)] focus-visible:outline-2 focus-visible:outline-offset-2"
+          hidden
+        >
           Show sample completion evidence
         </button>
       </section>
 
-      <section id="demo-step-4" class="mt-5" aria-labelledby="demo-heading-4" hidden>
-        <h2 id="demo-heading-4" tabindex="-1" class="text-2xl font-semibold text-[var(--text-primary)]">4. Follow the reminder</h2>
-        <p class="mt-3 text-[var(--text-secondary)]">A local reminder is associated with the approved task. Sample follow-up: “I sent the presentation slides.”</p>
-        <p class="mt-3 text-sm font-medium text-[var(--text-secondary)]">The app proposes completion based on evidence; it does not mark the task done automatically.</p>
-        <button type="button" data-action="confirm" class="mt-6 inline-flex min-h-12 items-center justify-center rounded-xl bg-[var(--btn-primary-bg)] px-5 py-3 font-semibold text-[var(--btn-primary-text)] hover:bg-[var(--btn-primary-hover)] focus-visible:outline-2 focus-visible:outline-offset-2">
+      <section
+        id="demo-step-4"
+        class="mt-5"
+        aria-labelledby="demo-heading-4"
+        hidden
+      >
+        <h2
+          id="demo-heading-4"
+          tabindex="-1"
+          class="text-2xl font-semibold text-[var(--text-primary)]"
+        >
+          4. Follow the reminder
+        </h2>
+        <p class="mt-3 text-[var(--text-secondary)]">
+          A local reminder is associated with the approved task. Sample
+          follow-up: “I sent the presentation slides.”
+        </p>
+        <p class="mt-3 text-sm font-medium text-[var(--text-secondary)]">
+          The app proposes completion based on evidence; it does not mark the
+          task done automatically.
+        </p>
+        <button
+          type="button"
+          data-action="confirm"
+          class="mt-6 inline-flex min-h-12 items-center justify-center rounded-xl bg-[var(--btn-primary-bg)] px-5 py-3 font-semibold text-[var(--btn-primary-text)] hover:bg-[var(--btn-primary-hover)] focus-visible:outline-2 focus-visible:outline-offset-2"
+        >
           Review completion suggestion
         </button>
       </section>
 
-      <section id="demo-step-5" class="mt-5" aria-labelledby="demo-heading-5" hidden>
-        <h2 id="demo-heading-5" tabindex="-1" class="text-2xl font-semibold text-[var(--text-primary)]">5. Confirm what is complete</h2>
-        <p class="mt-3 text-[var(--text-secondary)]">The task remains open until you confirm.</p>
-        <button type="button" data-action="finish" class="mt-6 inline-flex min-h-12 items-center justify-center rounded-xl bg-[var(--btn-primary-bg)] px-5 py-3 font-semibold text-[var(--btn-primary-text)] hover:bg-[var(--btn-primary-hover)] focus-visible:outline-2 focus-visible:outline-offset-2">
+      <section
+        id="demo-step-5"
+        class="mt-5"
+        aria-labelledby="demo-heading-5"
+        hidden
+      >
+        <h2
+          id="demo-heading-5"
+          tabindex="-1"
+          class="text-2xl font-semibold text-[var(--text-primary)]"
+        >
+          5. Confirm what is complete
+        </h2>
+        <p class="mt-3 text-[var(--text-secondary)]">
+          The task remains open until you confirm.
+        </p>
+        <button
+          type="button"
+          data-action="finish"
+          class="mt-6 inline-flex min-h-12 items-center justify-center rounded-xl bg-[var(--btn-primary-bg)] px-5 py-3 font-semibold text-[var(--btn-primary-text)] hover:bg-[var(--btn-primary-hover)] focus-visible:outline-2 focus-visible:outline-offset-2"
+        >
           Confirm sample completion
         </button>
       </section>
 
-      <p id="demo-status" class="mt-6 min-h-6 text-sm font-medium text-[var(--status-success)]" role="status" aria-live="polite"></p>
+      <p
+        id="demo-status"
+        class="mt-6 min-h-6 text-sm font-medium text-[var(--status-success)]"
+        role="status"
+        aria-live="polite"
+      >
+      </p>
     </div>
 
     <div class="mt-8 flex flex-wrap gap-3">
-      <Button href="/download" variant="primary" size="md">Get the Android app</Button>
-      <Button href={SITE_CONFIG.appRepoUrl} variant="secondary" size="md">Inspect the source</Button>
+      <Button href="/download" variant="primary" size="md"
+        >Get the Android app</Button
+      >
+      <Button href={SITE_CONFIG.appRepoUrl} variant="secondary" size="md"
+        >Inspect the source</Button
+      >
     </div>
   </section>
 </BaseLayout>
@@ -90,7 +216,9 @@ import { SITE_CONFIG } from '../config/site';
   const status = document.querySelector<HTMLElement>('#demo-status');
   const stepCount = document.querySelector<HTMLElement>('#demo-step-count');
   const answer = document.querySelector<HTMLElement>('#demo-answer');
-  const continueButton = document.querySelector<HTMLButtonElement>('[data-action="reminder"]');
+  const continueButton = document.querySelector<HTMLButtonElement>(
+    '[data-action="reminder"]'
+  );
 
   function showStep(step: number, message: string) {
     for (const item of steps) {
@@ -102,19 +230,34 @@ import { SITE_CONFIG } from '../config/site';
     document.querySelector<HTMLElement>(`#demo-heading-${step}`)?.focus();
   }
 
-  document.querySelector('#main-content')?.addEventListener('click', (event) => {
-    const button = (event.target as Element).closest<HTMLButtonElement>('[data-action]');
-    const action = button?.dataset.action;
-    if (!action) return;
-    if (action === 'review') showStep(2, 'Review the sample commitment before saving.');
-    if (action === 'approve') showStep(3, 'Sample task approved for this browser walkthrough.');
-    if (action === 'ask') {
-      if (answer) answer.hidden = false;
-      if (continueButton) continueButton.hidden = false;
-      if (status) status.textContent = 'Synthetic answer shown: Friday at 4 PM. This browser page did not run on-device inference.';
-    }
-    if (action === 'reminder') showStep(4, 'Sample reminder shown; completion still needs your review.');
-    if (action === 'confirm') showStep(5, 'Review the sample evidence before confirming.');
-    if (action === 'finish' && status) status.textContent = 'Sample history updated after your confirmation. Android task data is not changed by this demo.';
-  });
+  document
+    .querySelector('#main-content')
+    ?.addEventListener('click', (event) => {
+      const button = (event.target as Element).closest<HTMLButtonElement>(
+        '[data-action]'
+      );
+      const action = button?.dataset.action;
+      if (!action) return;
+      if (action === 'review')
+        showStep(2, 'Review the sample commitment before saving.');
+      if (action === 'approve')
+        showStep(3, 'Sample task approved for this browser walkthrough.');
+      if (action === 'ask') {
+        if (answer) answer.hidden = false;
+        if (continueButton) continueButton.hidden = false;
+        if (status)
+          status.textContent =
+            'Synthetic answer shown: Friday at 4 PM. This browser page did not run on-device inference.';
+      }
+      if (action === 'reminder')
+        showStep(
+          4,
+          'Sample reminder shown; completion still needs your review.'
+        );
+      if (action === 'confirm')
+        showStep(5, 'Review the sample evidence before confirming.');
+      if (action === 'finish' && status)
+        status.textContent =
+          'Sample history updated after your confirmation. Android task data is not changed by this demo.';
+    });
 </script>

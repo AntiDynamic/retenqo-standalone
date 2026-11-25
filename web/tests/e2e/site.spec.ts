@@ -134,20 +134,51 @@ test('mobile menu opens by keyboard and internal routes resolve', async ({
   await expect(page).toHaveURL(/\/download\/?$/);
 });
 
-test('synthetic workflow demo keeps approval steps explicit', async ({ page }) => {
+test('synthetic workflow demo keeps approval steps explicit', async ({
+  page,
+}) => {
   await page.goto('/demo');
-  await expect(page.getByText('Synthetic browser walkthrough', { exact: true })).toBeVisible();
-  await page.getByRole('button', { name: 'Review the suggestion' }).click();
-  await expect(page.getByRole('heading', { name: '2. Review before saving' })).toBeVisible();
-  await page.getByRole('button', { name: 'Approve and save sample task' }).click();
+  await expect(
+    page.getByText('Synthetic browser walkthrough', { exact: true })
+  ).toBeVisible();
+  await page.getByRole('button', { name: 'Review the suggestion' }).focus();
+  await page.keyboard.press('Enter');
+  await expect(
+    page.getByRole('heading', { name: '2. Review before saving' })
+  ).toBeVisible();
+  await expect(
+    page.getByRole('heading', { name: '2. Review before saving' })
+  ).toBeFocused();
+  await page
+    .getByRole('button', { name: 'Approve and save sample task' })
+    .click();
+  await expect(
+    page.getByRole('heading', { name: '3. Ask about saved memory' })
+  ).toBeFocused();
   await page.getByRole('button', { name: 'Ask the sample memory' }).click();
   await expect(page.getByRole('status')).toContainText('Friday at 4 PM');
-  await page.getByRole('button', { name: 'Show sample completion evidence' }).click();
-  await page.getByRole('button', { name: 'Review completion suggestion' }).click();
-  await expect(page.getByRole('heading', { name: '5. Confirm what is complete' })).toBeVisible();
-  await expect(page.getByText('The task remains open until you confirm.')).toBeVisible();
+  await page
+    .getByRole('button', { name: 'Show sample completion evidence' })
+    .click();
+  await expect(
+    page.getByRole('heading', { name: '4. Follow the reminder' })
+  ).toBeFocused();
+  await page
+    .getByRole('button', { name: 'Review completion suggestion' })
+    .click();
+  await expect(
+    page.getByRole('heading', { name: '5. Confirm what is complete' })
+  ).toBeVisible();
+  await expect(
+    page.getByRole('heading', { name: '5. Confirm what is complete' })
+  ).toBeFocused();
+  await expect(
+    page.getByText('The task remains open until you confirm.')
+  ).toBeVisible();
   await page.getByRole('button', { name: 'Confirm sample completion' }).click();
-  await expect(page.getByRole('status')).toContainText('Sample history updated');
+  await expect(page.getByRole('status')).toContainText(
+    'Sample history updated'
+  );
 });
 
 test('site requests no third-party resources and does not overflow at target widths', async ({

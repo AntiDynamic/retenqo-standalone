@@ -12,7 +12,7 @@ object FollowThroughMatcher {
         """(?i)\b(sent|send\s+you|shared|share\s+you|delivered|submitted|uploaded|finished|completed|done|received|got\s+it|all\s+set|sorted|thanks\s+for\s+(sending|sharing))\b""",
     )
 
-    private val nonAffirmativeContext = Regex("""(?i)^\\s*(?:did|have|has|was|were|are|is|if|unless|whether)\\b|[?？]$|[‘’“”\"].*[‘’“”\"]""")
+    private val nonAffirmativeContext = Regex("""(?i)^\s*(?:did|have|has|was|were|are|is|if|unless|whether)\b|[?？]$|[‘’“”\"].*[‘’“”\"]""")
 
     /** Reject contexts where a completion verb does not assert that the event happened. */
     fun isAffirmativeCompletionEvidence(evidence: String): Boolean =

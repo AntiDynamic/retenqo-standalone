@@ -29,12 +29,15 @@ case "$JAVA_VER" in
     ;;
 esac
 TASK="${1:-assembleDebug}"
+if (($# > 0)); then
+  shift
+fi
 
-"$ROOT/scripts/bootstrap-native-deps.sh"
+bash "$ROOT/scripts/bootstrap-native-deps.sh"
 
 cd "$APP_DIR"
 echo "JDK: $JAVA_VER"
-./gradlew "$TASK" --no-daemon
+bash ./gradlew "$TASK" --no-daemon "$@"
 APK="$APP_DIR/app/build/outputs/apk/debug/app-debug.apk"
 case "$TASK" in
   *Release*) APK="$APP_DIR/app/build/outputs/apk/release/app-release-unsigned.apk" ;;

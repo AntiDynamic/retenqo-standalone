@@ -22,7 +22,7 @@ fi
 if [[ -z "${ANDROID_SDK_ROOT:-}" && -n "${ANDROID_HOME:-}" ]]; then
   export ANDROID_SDK_ROOT="$ANDROID_HOME"
 fi
-"$ROOT/scripts/bootstrap-native-deps.sh"
+bash "$ROOT/scripts/bootstrap-native-deps.sh"
 cd "$APP_DIR"
-./gradlew :app:testDebugUnitTest --no-daemon "$@"
+bash ./gradlew :app:testDebugUnitTest --no-daemon "$@"
 echo "Unit tests OK"
