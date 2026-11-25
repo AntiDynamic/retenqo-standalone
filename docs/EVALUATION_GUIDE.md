@@ -9,7 +9,7 @@ Retenqo addresses fragmented personal context and forgotten commitments with a l
 | Efficiency | Rules-first processing, quantized CPU inference, bounded intake and static distribution | [Performance](PERFORMANCE.md), [AI implementation](AI_IMPLEMENTATION.md) |
 | Testing | JVM regressions, Android instrumentation, signed upgrade, website unit and browser suites | Recorded: 114/114 JVM, 6/6 device instrumentation, 25/25 website unit tests; website library line coverage 94.59%. [Complete results and scope](TESTING.md), [quality gates](QUALITY_GATES.md) |
 | Accessibility | Native labeled controls and web semantic/keyboard/axe coverage | [Accessibility](ACCESSIBILITY.md), [website accessibility](../web/docs/ACCESSIBILITY.md) |
-| Problem Statement Alignment | Retenqo-defined Open Innovation problem: fragmented context, forgotten information and missed commitments with privacy-preserving mobile intelligence. The organizer-selected challenge and submission SHA remain owner-side checks. | [Problem and acceptance criteria](PRODUCT_REQUIREMENTS.md), [PS-01..PS-07 traceability](REQUIREMENTS_TRACEABILITY.md), [demo scenario](DEMO_WALKTHROUGH.md) |
+| Problem Statement Alignment | Retenqo-defined Open Innovation problem: fragmented context, forgotten information and missed commitments with privacy-preserving mobile intelligence. The organizer-selected challenge and submission SHA remain owner-side checks. | [Clause → user action → code → test → demo → observed result](EVALUATION_ALIGNMENT.md), [problem and acceptance criteria](PRODUCT_REQUIREMENTS.md), [PS-01..PS-07 traceability](REQUIREMENTS_TRACEABILITY.md), [demo scenario](DEMO_WALKTHROUGH.md) |
 
 ## Current release evidence
 

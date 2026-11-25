@@ -2,7 +2,7 @@
 
 Exact source and test references make the implementation inspectable. For recorded results and their scope, see [Testing](TESTING.md) and [implementation status](IMPLEMENTATION_STATUS.md) for current boundaries.
 
-The row IDs **PS-01..PS-07** in the self-defined Open Innovation mapping are documented in [Product requirements](PRODUCT_REQUIREMENTS.md). The actual Hack2Skill challenge selection is not available in this repository and must be verified in the owner's submission account.
+The row IDs **PS-01..PS-07** in the self-defined Open Innovation mapping are documented in [Product requirements](PRODUCT_REQUIREMENTS.md). See the [problem-statement alignment matrix](EVALUATION_ALIGNMENT.md) for each problem clause linked to the user action, production path, acceptance test, demo and observed evidence. The actual Hack2Skill challenge selection is not available in this repository and must be verified in the owner's submission account.
 
 | Criterion | Requirement / achievement | Source | Evidence |
 | --- | --- | --- | --- |

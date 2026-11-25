@@ -2,7 +2,7 @@
 
 **Important messages shouldn’t become forgotten commitments.** Retenqo helps you capture selected phone context, review commitments, ask about saved details with on-device AI, and follow through with reminders you control. Personal memory stays on your Android device; notification capture is opt-in, and the language model is a separate optional download.
 
-[Synthetic browser walkthrough source](web/src/pages/demo.astro) · [Download Android APK](https://github.com/priyanshuchawda/retenqo/releases/latest) · [Website](https://retenqo.pages.dev) · [Source](https://github.com/priyanshuchawda/retenqo) · [Evaluation evidence](docs/EVALUATION_GUIDE.md)
+[Synthetic browser walkthrough source](web/src/pages/demo.astro) · [Problem-statement alignment matrix](docs/EVALUATION_ALIGNMENT.md) · [Download Android APK](https://github.com/priyanshuchawda/retenqo/releases/latest) · [Website](https://retenqo.pages.dev) · [Source](https://github.com/priyanshuchawda/retenqo) · [Evaluation evidence](docs/EVALUATION_GUIDE.md)
 
 ## The Problem We Solve
 
@@ -66,7 +66,7 @@ bash scripts/build-mneme.sh
 
 | Evaluation area | Evidence to inspect |
 | --- | --- |
-| Problem alignment | [Self-defined requirements](docs/PRODUCT_REQUIREMENTS.md), [traceability](docs/REQUIREMENTS_TRACEABILITY.md), [native walkthrough](docs/DEMO_WALKTHROUGH.md) |
+| Problem alignment | [Clause → user action → code → test → demo → observed result](docs/EVALUATION_ALIGNMENT.md), [self-defined requirements](docs/PRODUCT_REQUIREMENTS.md), [native walkthrough](docs/DEMO_WALKTHROUGH.md) |
 | Code quality | [Architecture](docs/ARCHITECTURE.md), [domain models](android/mneme/app/src/main/java/com/mneme/app/data/CardModels.kt), [website validation](web/src/lib/releases/validation.ts) |
 | Security | [SQLCipher database](android/mneme/app/src/main/java/com/mneme/app/data/MnemeDatabase.kt), [security review](docs/SECURITY_REVIEW.md), [threat model](docs/THREAT_MODEL.md) |
 | Efficiency | [Power gates](android/mneme/app/src/main/java/com/mneme/app/media/MnemePowerGates.kt), [performance record](docs/PERFORMANCE.md) |
